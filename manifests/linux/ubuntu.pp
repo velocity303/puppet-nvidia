@@ -3,7 +3,7 @@ class nvidia::linux::ubuntu (
 ) {
 	include apt
 
-	$package_name = "nvidia-graphics-drivers-${driver_version}"
+	$package_name = "nvidia-${driver_version}"
 
 	apt::ppa { 'ppa:graphics-drivers/ppa':
 		package_manage => true
