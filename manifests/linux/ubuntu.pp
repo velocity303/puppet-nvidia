@@ -13,7 +13,7 @@ class nvidia::linux::ubuntu (
 			package_manage => true
 		}
 	
-		ensure_resource( 'package', 'pciutils', {
+		ensure_resource( 'package', $package_name, {
 			'ensure' => 'present',
 			require => Class['apt::update']
 		})
