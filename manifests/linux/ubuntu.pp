@@ -1,16 +1,21 @@
 class nvidia::linux::ubuntu (
 	Integer[1] $driver_version,
 ) {
-	include apt
-
 	$package_name = "nvidia-${driver_version}"
 
-	apt::ppa { 'ppa:graphics-drivers/ppa':
-		package_manage => true
-	}
+	# Ensure that our custom fact can run
+	ensure_resource('package', 'pciutils', {'ensure' => 'present' })
 
-	package { $package_name:
-		ensure => present,
-		require => Class['apt::update']
+	if $nvidiagfx {
+		include apt
+
+		apt::ppa { 'ppa:graphics-drivers/ppa':
+			package_manage => true
+		}
+	
+		ensure_resource( 'package', 'pciutils', {
+			'ensure' => 'present',
+			require => Class['apt::update']
+		})
 	}
 }
