@@ -13,10 +13,8 @@ when hardware is detected.
 
 ## Limitations
 
-Right now, this module targets Ubuntu LTS - but I am keen to clean things up
-and extend to other linux distributions and Windows.
-
-Please feel free to head to the Github page and submit a pull request.
+Right now, this module targets Ubuntu - but I am keen to clean things up and
+extend to other linux distributions and Windows.
 
 ## Development
 
