@@ -1,7 +1,7 @@
 {
-  "name": "puppet-nvidia",
+  "name": "dowlingw-nvidia",
   "version": "0.1.0",
-  "author": "Will Dowling",
+  "author": "dowlingw",
   "summary": "Detect and install NVIDIA binary drivers",
   "license": "MIT",
   "source": "https://github.com/dowlingw/puppet-nvidia",
