@@ -10,9 +10,13 @@ class nvidia::linux::ubuntu (
 		include apt
 
 		apt::ppa { 'ppa:graphics-drivers/ppa':
-			package_manage => true,
-			# Canonical does weird things with their packages
-			pin => 501
+			package_manage => true
+		}
+
+		apt::pin { 'main':
+			packages => 'nvidia-*',
+			priority => 501,
+			origin => 'ppa.launchpad.net'
 		}
 	
 		ensure_resource( 'package', $package_name, {

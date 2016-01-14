@@ -1,6 +1,6 @@
 {
   "name": "dowlingw-nvidia",
-  "version": "0.1.1",
+  "version": "0.1.4",
   "author": "dowlingw",
   "summary": "Detect and install NVIDIA binary drivers",
   "license": "MIT",
