@@ -29,7 +29,7 @@ Using Heira:
 Or a declaring a resource in your manifest:
 
     class { 'nvidia':
-	version => 346
+      version => 346
     }
 
 ## Notes
