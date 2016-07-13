@@ -10,7 +10,7 @@ class nvidia::linux::ubuntu (
   if $::nvidiagfx {
     apt::key { 'graphics-drivers':
       id     => '2388FF3BE10A76F638F80723FCAE110B1118213C',
-      source => 'keyserver.ubuntu.com',
+      source => 'http://keyserver.ubuntu.com',
     }
     apt::source { 'graphics-drivers':
       location => 'http://ppa.launchpad.net/graphics-drivers/ppa/ubuntu',
